@@ -1,0 +1,10 @@
+Copyright (c) 2023 - Riccardo Tempesta
+Software name: H4A
+Author: Riccardo Tempesta (riccardo.tempesta@gmail.com)
+Year: 2023
+License: Open Source License (OSL) v. 3.0 - https://opensource.org/license/osl-3-0-php/
+
+External packages:
+
+This software contains forks of other packages released under different licenses and not covered by this copyright:
+-  "packages/dnd-kit-sortable-tree": fork of https://github.com/shaddix/dnd-kit-sortable-tree (MIT license)

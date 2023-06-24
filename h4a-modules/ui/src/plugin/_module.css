@@ -1,0 +1,79 @@
+html,
+body {
+    @apply bg-background text-text font-light text-base font-base;
+}
+
+.loader {
+    border-top-color: #3498db;
+    animation: spinner 0.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@layer components {
+    .h4a-ui-card {
+        @apply m-0;
+    }
+
+    .h4a-ui-page-title {
+        @apply text-4xl font-semibold my-6 text-center uppercase;
+    }
+
+    .h4a-ui-section {
+        @apply mb-3;
+    }
+
+    .h4a-ui-grid {
+        @apply grid gap-4;
+    }
+
+    .h4a-ui-button {
+        @apply bg-secondary text-black font-normal py-2 px-4 rounded hover:bg-highlight hover:transition-colors duration-300 ease-in-out disabled:opacity-50;
+
+        &.h4a-primary {
+            @apply bg-primary text-white font-semibold hover:bg-highlight;
+        }
+    }
+
+    .h4a-ui-input {
+        @apply bg-white border-gray-300 rounded border h-9 px-3 font-light text-sm flex items-center w-full;
+        input {
+            @apply outline-0 text-lg w-full;
+        }
+    }
+
+    .h4a-ui-textarea {
+        @apply bg-white border-gray-300 rounded border py-2 px-3 font-light text-sm flex items-center w-full;
+        textarea {
+            @apply outline-0 text-lg w-full;
+        }
+    }
+
+    .h4a-ui-loading {
+        @apply w-screen h-screen fixed top-0 left-0  flex justify-center items-center flex-col bg-white bg-opacity-75 z-50;
+    }
+
+    .h4a-ui-loading-spinner {
+        @apply loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-16 w-16 mb-4;
+    }
+
+    .h4a-ui-loading-text {
+        @apply text-center text-secondary font-semibold;
+    }
+}

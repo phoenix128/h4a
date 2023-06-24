@@ -1,0 +1,39 @@
+{
+    "components": [
+        {
+            "id": "nav",
+            "type": "@h4a/bigcommerce:CategoryNav"
+        },
+        {
+            "id": "product-info",
+            "type": "@h4a/ui:Grid",
+            "props": {
+                "columns": 2
+            },
+            "components": [
+                {
+                    "id": "product-image",
+                    "type": "@h4a/bigcommerce:ProductImage"
+                },
+                {
+                    "id": "product-section",
+                    "type": "@h4a/ui:Section",
+                    "components": [
+                        {
+                            "id": "product-details",
+                            "type": "@h4a/bigcommerce:ProductDetails"
+                        },
+                        {
+                            "id": "product-options",
+                            "type": "@h4a/bigcommerce:ProductOptions"
+                        },
+                        {
+                            "id": "product-cart",
+                            "type": "@h4a/bigcommerce:AddToCart"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

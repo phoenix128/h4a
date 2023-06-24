@@ -1,0 +1,27 @@
+@layer components {
+    .h4a-bigcommerce-product-details {
+        .h4a-product-name {
+            @apply font-semibold text-2xl mb-4;
+        }
+
+        .h4a-product-description {
+            @apply mb-4;
+        }
+
+        .h4a-bigcommerce-product-prices {
+            @apply text-primary font-semibold text-2xl mb-4;
+
+            &-strike {
+                @apply text-gray-400 line-through font-normal text-base;
+            }
+        }
+
+        .h4a-product-sku {
+            @apply mb-4;
+
+            span {
+                @apply font-semibold;
+            }
+        }
+    }
+}

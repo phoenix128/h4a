@@ -1,0 +1,32 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "paths": {
+      "@h4a/bigcommerce-source/*": ["../../../h4a-modules/bigcommerce/src/*"],
+      "@h4a/bigcommerce/*": [
+        "../../../h4a-rewrites/bigcommerce/src/*",
+        "../../../h4a-modules/bigcommerce/src/*"
+      ],
+      "@h4a/core/*": ["../../../h4a-modules/core/src/*"],
+      "@h4a/ui/*": ["../../../h4a-modules/ui/src/*"],
+      "@h4a/dnd-kit-sortable-tree/*": ["../src/*"]
+    }
+  }
+}

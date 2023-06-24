@@ -1,0 +1,13 @@
+{
+  "extends": "tsconfig/nextjs.json",
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "dist", ".next"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@h4a/bigcommerce/*": ["../../h4a-modules/bigcommerce/src/*"],
+      "@h4a/core/*": ["../../h4a-modules/core/src/*"]
+    },
+    "strictNullChecks": true
+  }
+}

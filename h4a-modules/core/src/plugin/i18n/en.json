@@ -1,0 +1,29 @@
+{
+    "translation": {
+        "pageBuilder": {
+            "tree": {
+                "core": {
+                    "addComponent": "Add component"
+                }
+            },
+            "componentActions": {
+                "core": {
+                    "deleteComponent": "Delete component",
+                    "confirmDelete": "Are you sure you want to delete this component?"
+                }
+            },
+            "optionsFields": {
+                "useDefault": "Use default",
+                "core": {
+                    "imagePicker": {
+                        "searchText": "Type to search...",
+                        "gallery": "Images Gallery",
+                        "choose": "Choose",
+                        "openGallery": "Open gallery",
+                        "dragAndDrop": "Drag and drop some files here, or click to select files"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": ".",
+    "paths": {
+      "@h4a/bigcommerce-source/*": ["../../h4a-modules/bigcommerce/src/*"],
+      "@h4a/bigcommerce/*": [
+        "../../h4a-rewrites/bigcommerce/src/*",
+        "../../h4a-modules/bigcommerce/src/*"
+      ],
+      "@h4a/core/*": ["../../h4a-modules/core/src/*"],
+      "@h4a/ui/*": ["../../h4a-modules/ui/src/*"],
+      "@h4a/dnd-kit-sortable-tree/*": [
+        "../../packages/dnd-kit-sortable-tree/src/*"
+      ]
+    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [{ "name": "next" }],
+    "strictNullChecks": true,
+    "target": "es5"
+  },
+  "include": [
+    "declaration.d.ts",
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": ["node_modules"]
+}

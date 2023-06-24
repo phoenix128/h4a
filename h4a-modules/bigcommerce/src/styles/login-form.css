@@ -1,0 +1,21 @@
+@layer components {
+    .h4a-bigcommerce-login-form {
+        @apply text-center;
+
+        > form {
+            @apply flex flex-col items-center space-y-2;
+
+            > div {
+                @apply flex flex-row space-x-4;
+
+                > label {
+                    @apply w-20 text-left;
+                }
+            }
+
+            input {
+                @apply h4a-ui-input;
+            }
+        }
+    }
+}

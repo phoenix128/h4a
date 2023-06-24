@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "pageBuilder": {
+            "contextVariable": {
+                "product.entityId": "Use current Product",
+                "products.entityId": "Use current Products List"
+            }
+        },
+        "product": {
+            "sku": "SKU",
+            "add-to-cart": "Add to cart",
+            "option": {
+                "required": "Required"
+            }
+        },
+        "login": {
+            "login-button": "Login"
+        }
+    }
+}

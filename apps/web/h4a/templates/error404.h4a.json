@@ -1,0 +1,8 @@
+{
+  "components": [
+    {
+      "id": "some-unique-id",
+      "type": "@h4a/core:Error"
+    }
+  ]
+}

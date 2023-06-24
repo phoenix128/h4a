@@ -1,0 +1,15 @@
+@layer components {
+    .h4a-bigcommerce-category-nav {
+        @apply h4a-ui-section p-5 border-b;
+    }
+
+    .h4a-bigcommerce-category-nav {
+        > ul {
+            @apply flex flex-row justify-center items-center mx-auto;
+        }
+
+        li {
+            @apply mx-3 font-semibold hover:underline hover:transition-colors duration-300 ease-in-out hover:text-highlight;
+        }
+    }
+}

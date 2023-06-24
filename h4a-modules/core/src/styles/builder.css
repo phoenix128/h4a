@@ -1,0 +1,213 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/**
+ * If it is not under "h4a-page-builder", it is created with portal while dragging.
+ */
+.dnd-sortable-tree_simple_tree-item {
+    .dnd-sortable-tree_simple_handle {
+        @apply hidden;
+    }
+}
+
+@layer components {
+    .h4a-root {
+        @apply bg-white;
+    }
+
+    .h4a-page-builder-danger-btn {
+        @apply text-sm text-center bg-red-500 text-white rounded-md px-2.5 py-1.5;
+        @apply transition-opacity duration-200;
+    }
+
+    .h4a-page-builder-primary-btn {
+        @apply text-sm text-center bg-blue-500 text-white rounded-md px-2.5 py-1.5;
+        @apply transition-opacity duration-200;
+    }
+
+    .h4a-page-builder-options-input {
+        @apply border border-gray-300 rounded-md px-2.5 py-1.5 w-full text-sm focus:bg-blue-50;
+    }
+
+    .h4a-page-builder-options-text {
+        @apply h4a-page-builder-options-input;
+    }
+
+    .h4a-page-builder-options-number {
+        @apply h4a-page-builder-options-input;
+    }
+
+    .h4a-page-builder-options-url {
+        @apply h4a-page-builder-options-input;
+    }
+
+    .h4a-builder-component-highlight {
+        @apply border border-blue-500 absolute z-50;
+
+        .h4a-builder-component-highlight-title {
+            @apply text-xs font-bold absolute -top-6 -left-0.5 bg-blue-500 text-white py-1 px-3 rounded-t;
+        }
+    }
+
+    .h4a-page-builder {
+        @apply w-screen h-screen overflow-hidden;
+
+        .dnd-sortable-tree_simple_wrapper {
+            @apply rounded-md hover:bg-gray-100;
+        }
+
+        .dnd-sortable-tree_simple_tree-item {
+            @apply flex p-0 m-0 px-2.5 py-1.5;
+
+            .dnd-sortable-tree_simple_handle {
+                @apply order-last w-4 cursor-move hidden;
+            }
+
+            &:hover {
+                .dnd-sortable-tree_simple_handle {
+                    @apply flex;
+                }
+            }
+        }
+
+        .h4a-page-builder-add-component {
+            @apply my-2 flex flex-row w-full;
+
+            .h4a-builder-options-dropdown {
+                @apply flex-1 text-sm ml-1;
+            }
+        }
+
+        .h4a-page-builder-tree {
+            @apply border-r h-screen border-gray-300 bg-white shadow-gray-500 z-50 fixed p-4;
+            width: 300px;
+
+            .h4a-page-builder-tree-item-wrapper-selected {
+                @apply bg-blue-200 text-white font-semibold;
+            }
+
+            .h4a-page-builder-tree-item {
+                @apply w-full text-sm border-0;
+            }
+        }
+
+        .h4a-page-builder-options {
+            @apply border-l h-screen p-2 border-gray-300 bg-white shadow-gray-500 z-50 fixed right-0 top-0 overflow-y-auto;
+            width: 350px;
+        }
+
+        .h4a-page-builder-options-image-picker {
+            @apply cursor-pointer;
+            @apply p-2 bg-gray-50 border-dashed border-2 border-gray-300 rounded-md flex flex-col items-center justify-center mb-10;
+
+            .h4a-page-builder-options-image-picker-preview {
+                @apply mb-3;
+            }
+
+            .h4a-page-builder-options-image-picker-gallery {
+                @apply text-sm bg-blue-500 text-white rounded-md px-2.5 py-1.5;
+            }
+        }
+
+        .h4a-page-builder-options-image-gallery {
+            @apply fixed top-0 left-0 w-full h-full z-30 bg-black bg-opacity-50;
+
+            .h4a-page-builder-options-image-gallery-modal {
+                @apply bg-white shadow-lg shadow-gray-600 border flex flex-col;
+                @apply h-5/6 w-5/6 m-auto mt-10;
+
+                .h4a-page-builder-options-image-gallery-header {
+                    @apply flex justify-between items-center border-b bg-white px-10 py-5 overflow-ellipsis w-full;
+                    h2 {
+                        @apply text-lg font-bold;
+                    }
+                }
+            }
+
+            .h4a-page-builder-options-image-gallery-inner {
+                @apply p-10 overflow-y-auto;
+            }
+        }
+
+        .h4a-page-builder-options-image-gallery-drop-zone {
+            @apply pb-5 pt-2 bg-gray-50 border-dashed border-2 border-gray-300 rounded-md flex flex-col items-center justify-center my-5 mx-10;
+            @apply cursor-pointer flex flex-col items-center justify-center text-center text-xs;
+            @apply h-32;
+
+            img {
+                @apply w-10 h-10 mx-auto my-5;
+            }
+        }
+
+        .h4a-page-builder-options-image-gallery-search {
+            @apply border-t border-b px-10 py-2;
+
+            input {
+                @apply h4a-page-builder-options-input;
+            }
+        }
+
+        .h4a-page-builder-options-image-gallery-close {
+            @apply right-10 w-10 h-10 cursor-pointer z-50;
+        }
+
+        .h4a-page-builder-options-image-gallery-loading {
+            @apply w-20 h-20 m-auto;
+        }
+
+        .h4a-page-builder-options-image-gallery-items-list {
+            @apply grid gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1;
+        }
+
+        .h4a-page-builder-options-image-gallery-item {
+            .h4a-page-builder-options-image-gallery-item-name {
+                @apply text-sm overflow-ellipsis w-full whitespace-nowrap overflow-hidden px-5 mt-2 mb-5;
+            }
+
+            .h4a-page-builder-options-image-gallery-item-inner {
+                @apply relative cursor-pointer aspect-square bg-gray-200 rounded-md overflow-hidden;
+
+                img {
+                    @apply object-contain w-full h-full;
+                }
+            }
+
+            .h4a-page-builder-options-image-gallery-item-choose-btn {
+                @apply h4a-page-builder-primary-btn;
+                @apply absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0;
+            }
+
+            &:hover {
+                .h4a-page-builder-options-image-gallery-item-choose-btn {
+                    @apply opacity-100;
+                }
+            }
+        }
+
+        .h4a-page-builder-content {
+            @apply flex flex-col h-screen p-2 bg-gray-50;
+            margin-left: 300px;
+            margin-right: 350px;
+
+            .h4a-page-builder-content-inner {
+                @apply flex-1 overflow-y-scroll h-screen border border-gray-300 shadow-lg relative bg-white;
+            }
+        }
+
+        .h4a-page-builder-options {
+            @apply flex flex-col h-screen;
+            .h4a-page-builder-component-title {
+                @apply font-bold text-xl text-gray-950 mb-2;
+            }
+            .h4a-page-builder-component-options-fields {
+                @apply flex-1 overflow-y-auto overflow-x-hidden;
+            }
+            .h4a-page-builder-component-actions {
+                .h4a-page-builder-component-actions-button-delete {
+                    @apply h4a-page-builder-danger-btn w-full;
+                }
+            }
+        }
+    }
+}

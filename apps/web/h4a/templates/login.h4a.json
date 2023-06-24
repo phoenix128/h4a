@@ -1,0 +1,12 @@
+{
+    "components": [
+        {
+            "id": "nav",
+            "type": "@h4a/bigcommerce:CategoryNav"
+        },
+        {
+            "id": "form",
+            "type": "@h4a/bigcommerce:LoginForm"
+        }
+    ]
+}

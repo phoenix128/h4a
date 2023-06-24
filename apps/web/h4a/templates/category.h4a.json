@@ -1,0 +1,24 @@
+{
+    "components": [
+        {
+            "id": "nav",
+            "type": "@h4a/bigcommerce:CategoryNav"
+        },
+        {
+            "id": "title",
+            "type": "@h4a/ui:PageTitle"
+        },
+        {
+            "id": "pagination1",
+            "type": "@h4a/bigcommerce:Pagination"
+        },
+        {
+            "id": "product-list",
+            "type": "@h4a/bigcommerce:ProductsList"
+        },
+        {
+            "id": "pagination2",
+            "type": "@h4a/bigcommerce:Pagination"
+        }
+    ]
+}

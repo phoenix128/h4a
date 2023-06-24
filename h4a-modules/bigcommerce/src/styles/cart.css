@@ -1,0 +1,5 @@
+@layer components {
+    .h4a-bigcommerce-add-to-cart {
+        @apply h4a-ui-button;
+    }
+}

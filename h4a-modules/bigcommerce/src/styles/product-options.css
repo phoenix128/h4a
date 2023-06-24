@@ -1,0 +1,56 @@
+@layer components {
+    .h4a-option-strike-through {
+        @apply bg-gray-800 h-0.5 absolute top-4 -left-0.5;
+        transform: rotate(-35deg);
+        width: 110%;
+    }
+
+    .h4a-bigcommerce-product-option {
+        @apply mb-4;
+    }
+
+    .h4a-rectangle-box-options {
+        @apply flex flex-row space-x-2;
+    }
+
+    .h4a-rectangle-box-option-value {
+        @apply w-12 h-9 border rounded border-gray-300 p-0.5 text-xs;
+        @apply cursor-pointer;
+        @apply relative;
+
+        > * {
+            @apply w-full h-full flex flex-row items-center justify-center;
+        }
+
+        .h4a-swatch-color {
+            @apply w-full h-full;
+        }
+
+        &.h4a-selected {
+            @apply border-2 border-gray-900 shadow-gray-400 shadow-md;
+        }
+
+        &.h4a-disabled {
+            @apply opacity-30 bg-gray-400;
+            @apply after:h4a-option-strike-through;
+        }
+    }
+
+    .h4a-bigcommerce-multiple-choice-option-swatches,
+    .h4a-bigcommerce-multiple-choice-option-rectangle-boxes {
+        @apply h4a-rectangle-box-options;
+    }
+
+    .h4a-bigcommerce-rectangle-boxes-option-value,
+    .h4a-bigcommerce-swatch-option-value {
+        @apply h4a-rectangle-box-option-value;
+    }
+
+    .h4a-bigcommerce-multiline-text-field-option {
+        @apply h4a-ui-textarea;
+    }
+
+    .h4a-bigcommerce-text-field-option {
+        @apply h4a-ui-input;
+    }
+}

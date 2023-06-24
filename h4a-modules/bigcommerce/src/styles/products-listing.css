@@ -1,0 +1,67 @@
+.h4a-bigcommerce-product-card {
+    @apply h4a-ui-card;
+
+    &:hover {
+        .h4a-bigcommerce-product-image {
+            @apply shadow-2xl;
+        }
+    }
+
+    .h4a-bigcommerce-product-image {
+        @apply bg-card p-4 mb-4 transition-shadow duration-300 ease-in-out w-full;
+    }
+
+    .h4a-product-name {
+        @apply font-semibold my-2 h-14 overflow-ellipsis overflow-hidden;
+    }
+
+    .h4a-bigcommerce-product-prices {
+        @apply flex flex-row align-middle;
+
+        .h4a-price-final {
+            @apply text-secondary font-semibold;
+        }
+
+        .h4a-price-strike {
+            @apply text-gray-400 line-through font-normal text-xs self-center mr-2;
+        }
+    }
+
+    .h4a-bigcommerce-add-to-cart {
+        @apply mt-2;
+    }
+}
+
+.h4a-bigcommerce-products-list {
+    @apply h4a-ui-section px-4;
+
+    > ul {
+        @apply grid gap-1;
+    }
+
+    .h4a-bigcommerce-product-card {
+        @apply mx-2 mb-5;
+    }
+}
+
+.h4a-bigcommerce-pagination {
+    @apply h4a-ui-section;
+
+    > ul {
+        @apply self-center flex flex-row justify-center items-center mx-auto;
+
+        li {
+            > * {
+                @apply bg-card inline-block w-9 h-9 pt-1.5 mx-1 text-center;
+            }
+
+            > a {
+                @apply hover:shadow-lg transition-shadow duration-300 ease-in-out;
+            }
+
+            [data-h4a-current='true'] {
+                @apply font-bold;
+            }
+        }
+    }
+}

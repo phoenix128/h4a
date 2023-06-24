@@ -1,0 +1,18 @@
+{
+  "name": "@h4a/bigcommerce-rewrite",
+  "h4aRewrite": "@h4a/bigcommerce",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\""
+  },
+  "devDependencies": {
+    "next": "^13.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.33",
+    "@types/react-dom": "18.0.11",
+    "typescript": "5.0.3"
+  }
+}
